@@ -1,31 +1,27 @@
 # PizzDesk
 
-**PizzDesk** è un'applicazione desktop per la gestione degli ordini di
-una pizzeria. Il progetto offre un'interfaccia per comporre gli ordini,
-personalizzare le pizze e gestire il menu e gli ingredienti, con
-salvataggio dei dati tramite SQLite.
+**PizzDesk** is a desktop application designed to help pizzerias manage
+their orders and day-to-day operations. It provides tools to create
+orders, customize pizzas, manage the menu and ingredients, print
+receipts, and generate daily reports.
 
-> Il nome PizzDesk è provvisorio: puoi sostituirlo con il nome
-> definitivo che sceglierai.
+## Features
 
-## Funzionalità
+-   **Order management** -- create and manage customer orders, with
+    products organized by category, quantity, and price.
+-   **Menu management** -- add and edit available products and their
+    prices.
+-   **Pizza customization** -- choose a pizza base and its ingredients,
+    with the price updated accordingly.
+-   **Ingredient management** -- add, edit, and remove ingredients and
+    their prices.
+-   **Data persistence** -- store menu items, orders, and related
+    information in an SQLite database.
+-   **Printing** -- print order receipts and daily reports.
+-   **Daily reports** -- generate and view a summary of the day's
+    orders.
 
--   **Gestione degli ordini** -- composizione degli ordini con prodotti
-    suddivisi per categoria, quantità e prezzo.
--   **Gestione del menu** -- caricamento e modifica dei prodotti
-    disponibili e dei relativi prezzi.
--   **Personalizzazione delle pizze** -- scelta della base e degli
-    ingredienti, con aggiornamento del prezzo.
--   **Gestione degli ingredienti** -- aggiunta, modifica ed eliminazione
-    degli ingredienti e dei relativi prezzi.
--   **Salvataggio dei dati** -- memorizzazione di menu, ordini e
-    informazioni correlate in un database SQLite.
--   **Stampa** -- stampa dello scontrino dell'ordine e del resoconto
-    giornaliero.
--   **Resoconto giornaliero** -- generazione e consultazione del
-    riepilogo degli ordini della giornata.
-
-## Tecnologie
+## Built With
 
 -   C#
 -   .NET 10
@@ -33,30 +29,30 @@ salvataggio dei dati tramite SQLite.
 -   SQLite
 -   `Microsoft.Data.Sqlite`
 
-## Requisiti
+## Requirements
 
-Per compilare ed eseguire il progetto sono necessari:
+To build and run the project, you need:
 
 -   Windows
 -   .NET 10 SDK
--   Visual Studio con il carico di lavoro **Sviluppo desktop .NET**,
-    oppure un ambiente compatibile con .NET 10 e Windows Forms.
+-   Visual Studio with the **.NET desktop development** workload, or
+    another environment that supports .NET 10 and Windows Forms.
 
-## Avvio del progetto
+## Getting Started
 
-1.  Clona il repository:
+1.  Clone the repository:
 
     ``` bash
     git clone https://github.com/USERNAME/REPOSITORY.git
     ```
 
-2.  Apri la soluzione o il file `Prenotazione_PIzze.csproj` con Visual
-    Studio.
+2.  Open the solution or the `Prenotazione_PIzze.csproj` project file in
+    Visual Studio.
 
-3.  Ripristina i pacchetti NuGet e compila il progetto.
+3.  Restore the NuGet packages and build the project.
 
-4.  Avvia l'applicazione da Visual Studio oppure esegui il progetto da
-    terminale su Windows:
+4.  Run the application from Visual Studio, or use the terminal on
+    Windows:
 
     ``` bash
     dotnet restore
@@ -66,16 +62,15 @@ Per compilare ed eseguire il progetto sono necessari:
 
 ## Database
 
-Il progetto utilizza SQLite. Il database `pizzeria.db` viene creato e
-inizializzato automaticamente all'avvio, nella cartella `Database`
-accanto all'eseguibile.
+The application uses SQLite. The `pizzeria.db` database is automatically
+created and initialized at startup, inside the `Database` folder next to
+the executable.
 
-La cartella e il database vengono utilizzati per conservare i dati
-dell'applicazione. Se distribuisci l'applicazione su un altro computer,
-assicurati che l'utente abbia i permessi di scrittura nella directory in
-cui viene eseguita.
+This database stores the application's data. When deploying the
+application to another computer, make sure the user has write
+permissions for the directory in which the application runs.
 
-## Struttura del progetto
+## Project Structure
 
 ``` text
 Prenotazione_PIzze/
@@ -93,25 +88,20 @@ Prenotazione_PIzze/
     └── Prenotazione_PIzze.csproj
 ```
 
--   `Form1.cs` -- finestra principale e gestione del flusso degli
-    ordini.
--   `Database/DatabaseManager.cs` -- accesso e operazioni sul database
-    SQLite.
--   `GestioneIngredienti.cs` -- schermata per la gestione degli
-    ingredienti.
--   `PersonalizzaPizza.cs` -- schermata per la personalizzazione delle
-    pizze.
--   `SchedaPizza.cs` -- componente grafico e logica delle schede
-    prodotto.
+-   `Form1.cs` -- main application window and order workflow.
+-   `Database/DatabaseManager.cs` -- SQLite database access and
+    operations.
+-   `GestioneIngredienti.cs` -- ingredient management screen.
+-   `PersonalizzaPizza.cs` -- pizza customization screen.
+-   `SchedaPizza.cs` -- product card UI component and related logic.
 
-## Stato del progetto
+## Project Status
 
-Il progetto è in sviluppo. Funzionalità, interfaccia e struttura possono
-evolvere nel tempo.
+This project is currently under development. Features, the user
+interface, and the project structure may change over time.
 
-## Contributi
+## Contributing
 
-Suggerimenti, segnalazioni di bug e proposte di miglioramento sono
-benvenuti. Per modifiche importanti, apri prima una issue così da
-discutere l'intervento.
-
+Suggestions, bug reports, and improvement ideas are welcome. For major
+changes, please open an issue first to discuss what you would like to
+change.
