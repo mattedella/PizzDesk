@@ -115,8 +115,3 @@ Suggerimenti, segnalazioni di bug e proposte di miglioramento sono
 benvenuti. Per modifiche importanti, apri prima una issue così da
 discutere l'intervento.
 
-## Licenza
-
-Al momento non è specificata una licenza. Aggiungi un file `LICENSE` al
-repository se desideri consentire e disciplinare il riutilizzo del
-codice.
