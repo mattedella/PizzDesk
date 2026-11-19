@@ -21,17 +21,17 @@ namespace Prenotazione_PIzze
 
         private void ApplicaStileMinimal()
         {
-            BackColor = Color.FromArgb(245, 246, 247);
+            BackColor = Tema.Sfondo;
             Font = new Font("Segoe UI", 9F);
-            flpIngredienti.BackColor = Color.FromArgb(245, 246, 247);
+            flpIngredienti.BackColor = Tema.Sfondo;
 
             txtNuovoIngrediente.BackColor = Color.White;
             txtNuovoIngrediente.ForeColor = Color.FromArgb(41, 41, 41);
             txtNuovoIngrediente.BorderStyle = BorderStyle.FixedSingle;
             txtNuovoIngrediente.Font = new Font("Segoe UI", 10F);
 
-            ApplicaStilePulsante(btnNew, Color.FromArgb(168, 61, 50), Color.White);
-            ApplicaStilePulsante(btnChiudi, Color.FromArgb(238, 238, 238), Color.FromArgb(41, 41, 41));
+            ApplicaStilePulsante(btnNew, Tema.Verde, Color.White);
+            ApplicaStilePulsante(btnChiudi, Tema.Verde, Color.White);
         }
 
         private void ApplicaStilePulsante(Button btn, Color sfondo, Color testo)
@@ -42,8 +42,8 @@ namespace Prenotazione_PIzze
             btn.ForeColor = testo;
             btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btn.Cursor = Cursors.Hand;
-            btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(225, 225, 225);
-            btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(215, 215, 215);
+            btn.FlatAppearance.MouseOverBackColor = Tema.VerdeScuro;
+            btn.FlatAppearance.MouseDownBackColor = Tema.Verde;
         }
 
         private void CaricaListaIngredienti()
@@ -94,8 +94,8 @@ namespace Prenotazione_PIzze
                 {
                     Text = "✎",
                     FlatStyle = FlatStyle.Flat,
-                    BackColor = Color.FromArgb(238, 238, 238),
-                    ForeColor = Color.FromArgb(41, 41, 41),
+                    BackColor = Tema.Giallo,
+                    ForeColor = Tema.Bianco,
                     Font = new Font("Segoe UI Symbol", 12F),
                     Cursor = Cursors.Hand,
                     Dock = DockStyle.Fill,

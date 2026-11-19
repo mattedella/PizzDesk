@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using Prenotazione_PIzze;
+using System.Globalization;
 
 namespace PizzaPrenotate
 {
@@ -38,7 +39,7 @@ namespace PizzaPrenotate
             Height = 54;
             MinimumSize = new Size(326, 36);
             Margin = new Padding(3);
-            BackColor = Color.White;
+            BackColor = Tema.Giallo;
             BorderStyle = BorderStyle.None;
             Dock = DockStyle.Top;
 
@@ -51,7 +52,7 @@ namespace PizzaPrenotate
                 AutoSize = true,
                 AutoEllipsis = true,
                 Margin = new Padding(5, 3, 3, 3),
-                ForeColor = Color.FromArgb(41, 41, 41)
+                ForeColor = Tema.Testo
             };
 
             lblPrezzo = new Label
@@ -97,7 +98,8 @@ namespace PizzaPrenotate
                 Text = "−",
                 Dock = DockStyle.Fill,
                 Margin = new Padding(2),
-                Cursor = Cursors.Hand
+                Cursor = Cursors.Hand,
+                ForeColor = Tema.VerdeScuro,
             };
 
             lblQuantita = new Label
@@ -115,7 +117,8 @@ namespace PizzaPrenotate
                 Text = "+",
                 Dock = DockStyle.Fill,
                 Margin = new Padding(2),
-                Cursor = Cursors.Hand
+                Cursor = Cursors.Hand,
+                ForeColor = Tema.VerdeScuro,
             };
 
             TableLayoutPanel layout = new TableLayoutPanel
@@ -207,17 +210,17 @@ namespace PizzaPrenotate
             pulsante.FlatStyle = FlatStyle.Flat;
             pulsante.FlatAppearance.BorderSize = 0;
 
-            pulsante.BackColor = Color.FromArgb(238, 238, 238);
-            pulsante.ForeColor = Color.FromArgb(41, 41, 41);
+            pulsante.BackColor = Tema.Giallo;
+            pulsante.ForeColor = Tema.Testo;
 
             pulsante.Font = new Font("Segoe UI", 12F, FontStyle.Regular);
             pulsante.Cursor = Cursors.Hand;
 
             pulsante.FlatAppearance.MouseOverBackColor =
-                Color.FromArgb(225, 225, 225);
+                Tema.GialloScuro;
 
             pulsante.FlatAppearance.MouseDownBackColor =
-                Color.FromArgb(215, 215, 215);
+                Tema.Giallo;
 
             pulsante.FlatAppearance.BorderColor = Color.FromArgb(230, 230, 230);
             pulsante.FlatAppearance.BorderSize = 1;

@@ -54,10 +54,11 @@ namespace Prenotazione_PIzze
 
         private void ApplicaStileMinimal()
         {
-            Color sfondo = Color.FromArgb(245, 246, 247);
-            Color bianco = Color.White;
-            Color testo = Color.FromArgb(41, 41, 41);
-            Color rosso = Color.FromArgb(168, 61, 50);
+            Color sfondo = Tema.Sfondo;
+            Color bianco = Tema.Bianco;
+            Color testo = Tema.Testo;
+            Color verde = Tema.Verde;
+            Color verdescuro = Tema.VerdeScuro;
 
             BackColor = sfondo;
             Font = new Font("Segoe UI", 9F);
@@ -87,14 +88,15 @@ namespace Prenotazione_PIzze
             txtPrezzo.Font = new Font("Segoe UI", 10F);
             txtPrezzo.ReadOnly = true;
 
-            ApplicaStilePulsante(btnNext, rosso, bianco);
-            ApplicaStilePulsante(btnFine, rosso, bianco);
+            ApplicaStilePulsante(btnNext, verde, bianco, verdescuro);
+            ApplicaStilePulsante(btnFine, verde, bianco, verdescuro);
         }
 
         private void ApplicaStilePulsante(
             Button pulsante,
             Color sfondo,
-            Color coloreTesto)
+            Color coloreTesto,
+            Color verdescuro)
         {
             pulsante.FlatStyle = FlatStyle.Flat;
             pulsante.FlatAppearance.BorderSize = 0;
@@ -102,8 +104,8 @@ namespace Prenotazione_PIzze
             pulsante.ForeColor = coloreTesto;
             pulsante.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             pulsante.Cursor = Cursors.Hand;
-            pulsante.FlatAppearance.MouseOverBackColor = Color.FromArgb(145, 49, 40);
-            pulsante.FlatAppearance.MouseDownBackColor = Color.FromArgb(125, 42, 35);
+            pulsante.FlatAppearance.MouseOverBackColor = verdescuro;
+            pulsante.FlatAppearance.MouseDownBackColor = sfondo;
             pulsante.Height = 36;
         }
 

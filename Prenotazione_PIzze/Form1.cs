@@ -91,12 +91,14 @@ namespace Prenotazione_PIzze
 
         private void ApplicaStileMinimal()
         {
-            Color sfondo = Color.FromArgb(245, 246, 247);
-            Color bianco = Color.White;
-            Color testo = Color.FromArgb(41, 41, 41);
-            Color bordo = Color.FromArgb(224, 224, 224);
-            Color rosso = Color.FromArgb(168, 61, 50);
-            Color grigio = Color.FromArgb(238, 238, 238);
+            Color sfondo = Tema.Sfondo;
+            Color bianco = Tema.Bianco;
+            Color testo = Tema.Testo;
+            Color bordo = Tema.Bordo;
+            Color verde = Tema.Verde;
+            Color giallo = Tema.Giallo;
+            Color verdescuro = Tema.VerdeScuro;
+            Color gialloscuro = Tema.GialloScuro;
 
             // Finestra principale
             BackColor = sfondo;
@@ -113,14 +115,14 @@ namespace Prenotazione_PIzze
             btnModEl.Size = new Size(100, 30);
             btnEliminaMod.Size = new Size(100, 30);
 
-            btnStampa.BackColor = Color.FromArgb(168, 61, 50);
+            btnStampa.BackColor = sfondo;
             btnStampa.ForeColor = Color.White;
 
             btnStampa.FlatAppearance.MouseOverBackColor =
-                Color.FromArgb(145, 49, 40);
+                verdescuro;
 
             btnStampa.FlatAppearance.MouseDownBackColor =
-                Color.FromArgb(125, 42, 35);
+                verde;
 
             btnStampa.TextAlign = ContentAlignment.MiddleCenter;
             btnPersonalizza.TextAlign = ContentAlignment.MiddleCenter;
@@ -133,7 +135,7 @@ namespace Prenotazione_PIzze
             // Pannelli e contenitori
             tlpPrincipale.BackColor = sfondo;
             pnlExtra.BackColor = sfondo;
-            pnlPizze.BackColor = sfondo;
+            pnlPizze.BackColor = sfondo;    
 
             pnlCoperto.BackColor = sfondo;
             pnlBevande.BackColor = sfondo;
@@ -169,19 +171,16 @@ namespace Prenotazione_PIzze
             lblTotale.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
 
             // Pulsanti
-            ApplicaStilePulsante(btnStampa, rosso, bianco);
+            ApplicaStilePulsante(btnStampa, verde, bianco);
 
-            ApplicaStilePulsante(btnAddPizze, grigio, testo);
-            ApplicaStilePulsante(btnAddBevande, grigio, testo);
-            ApplicaStilePulsante(btnAddDolci, grigio, testo);
-            ApplicaStilePulsante(btnPersonalizza, grigio, testo);
-            ApplicaStilePulsante(btnModEl, grigio, testo);
+            ApplicaStilePulsante(btnAddPizze, verde, bianco);
+            ApplicaStilePulsante(btnAddBevande, verde, bianco);
+            ApplicaStilePulsante(btnAddDolci, verde, bianco);
+            ApplicaStilePulsante(btnPersonalizza, verde, bianco);
+            ApplicaStilePulsante(btnModEl, verde, bianco);
 
             ApplicaStilePulsante(
-                btnEliminaMod,
-                Color.FromArgb(250, 235, 235),
-                Color.FromArgb(170, 50, 50)
-            );
+                btnEliminaMod,giallo, testo);
 
             // Menu superiore
             menuStripPrincipale.BackColor = bianco;
@@ -193,7 +192,7 @@ namespace Prenotazione_PIzze
             dgvPizze.GridColor = bordo;
             dgvPizze.BorderStyle = BorderStyle.None;
             dgvPizze.EnableHeadersVisualStyles = false;
-            dgvPizze.ColumnHeadersDefaultCellStyle.BackColor = grigio;
+            dgvPizze.ColumnHeadersDefaultCellStyle.BackColor = giallo;
             dgvPizze.ColumnHeadersDefaultCellStyle.ForeColor = testo;
             dgvPizze.DefaultCellStyle.BackColor = bianco;
             dgvPizze.DefaultCellStyle.ForeColor = testo;
